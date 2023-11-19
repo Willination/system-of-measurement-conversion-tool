@@ -21,7 +21,7 @@ export class ImperialToMetricFormComponent implements OnInit {
   temperatureMetricUnits: string[] = ['Celsius', 'Kelvin'];
   temperatureImperialUnits: string[] = ['Fahrenheit'];
 
-  lengthMetricUnits: string[] = ['Millimeters', 'Centimeters', 'Decimeters', 'Kilometers'];
+  lengthMetricUnits: string[] = ['Millimeters', 'Centimeters', 'Meters', 'Kilometers'];
   lengthImperialUnits: string[] = ['Inches', 'Feet', 'Yards', 'Miles'];
 
   weightMetricUnits: string[] = ['Milligrams', 'Grams', 'Decigrams', 'Kilograms', 'Metric Tons'];
