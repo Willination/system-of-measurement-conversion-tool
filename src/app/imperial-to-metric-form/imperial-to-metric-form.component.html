@@ -1,0 +1,40 @@
+<div class="mt-4">
+  <div class="alert alert-danger" *ngIf="showError">
+    Please fill in all fields before converting.
+  </div>
+  <div class="form-group">
+    <label for="conversionType">Conversion Type</label>
+    <select class="form-control" id="conversionType" [(ngModel)]="conversionModel.conversionType" (change)="updateUnits()">
+      <option *ngFor="let type of conversionTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="fromUnit">From (Imperial)</label>
+    <select class="form-control" id="fromUnit" [(ngModel)]="conversionModel.fromUnit">
+      <option *ngFor="let unit of imperialUnits" [value]="unit">{{ unit }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="fromValue">Value (Imperial)</label>
+    <input type="number" class="form-control" id="fromValue" [(ngModel)]="conversionModel.fromValue">
+  </div>
+
+  <div class="form-group">
+    <label for="toUnit">To (Metric)</label>
+    <select class="form-control" id="toUnit" [(ngModel)]="conversionModel.toUnit">
+      <option *ngFor="let unit of metricUnits" [value]="unit">{{ unit }}</option>
+    </select>
+  </div>
+
+  <div class="d-flex justify-content-start">
+    <button class="btn mr-1 btn-primary" (click)="convert()">Convert</button>
+    <button class="btn ml-1 btn-secondary" (click)="resetForm()">Reset Form</button>
+  </div>
+
+  <div class="form-group mt-3">
+    <label for="toValue">Result (Metric)</label>
+    <input type="text" class="form-control" id="toValue" [(ngModel)]="conversionModel.toValue" disabled>
+  </div>
+</div>

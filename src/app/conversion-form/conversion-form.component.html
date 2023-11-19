@@ -1,0 +1,34 @@
+<div class="mt-4">
+  <div class="form-group">
+    <label for="conversionType">Conversion Type</label>
+    <select class="form-control" id="conversionType" [(ngModel)]="conversionModel.conversionType" (change)="updateUnits()">
+      <option *ngFor="let type of conversionTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="fromUnit">From (Metric)</label>
+    <select class="form-control" id="fromUnit" [(ngModel)]="conversionModel.fromUnit">
+      <option *ngFor="let unit of metricUnits" [value]="unit">{{ unit }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="fromValue">Value</label>
+    <input type="number" class="form-control" id="fromValue" [(ngModel)]="conversionModel.fromValue">
+  </div>
+
+  <div class="form-group">
+    <label for="toUnit">To (Imperial)</label>
+    <select class="form-control" id="toUnit" [(ngModel)]="conversionModel.toUnit">
+      <option *ngFor="let unit of imperialUnits" [value]="unit">{{ unit }}</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" (click)="convert()">Convert</button>
+
+  <div class="form-group mt-3">
+    <label for="toValue">Result (Imperial)</label>
+    <input type="text" class="form-control" id="toValue" [(ngModel)]="conversionModel.toValue" disabled>
+  </div>
+</div>
