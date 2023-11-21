@@ -7,7 +7,8 @@ import { ConversionModel } from './conversion-model';
   providedIn: 'root'
 })
 export class ConversionApiService {
-  private apiUrl = 'http://localhost:8080/api/conversion';
+ /* private apiUrl = 'http://localhost:8080/api/conversion';*/
+  private apiUrl = 'http://18.232.120.185:8080/system-of-measurement-conversion-tool-spring-0.0.1-SNAPSHOT/api/conversion';
 
   constructor(private httpClient: HttpClient) {}
 
