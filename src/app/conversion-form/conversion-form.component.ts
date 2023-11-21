@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { ConversionModel } from '../conversion-model';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-conversion-form',
@@ -25,7 +25,7 @@ export class ConversionFormComponent {
   weightImperialUnits: string[] = ['Ounces', 'Pounds', 'US Short Tons'];
 
   ngOnInit() {
-    this.updateUnits(); // Initialize units based on the default conversion type
+    this.updateUnits();
   }
 
   updateUnits() {
@@ -50,8 +50,6 @@ export class ConversionFormComponent {
   }
 
   convert() {
-    // Add your conversion logic here
-    // For simplicity, let's assume 1:1 conversion for now
     this.conversionModel.toValue = this.conversionModel.fromValue;
   }
 }
