@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
+Here is the live application hosted on Aws on a nginx server : http://34.228.19.36/ 
+The backend is hosted on Aws Linux Instance on a Tomcat 10.1 server
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
